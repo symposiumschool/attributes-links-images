@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Attributes</title>
+</head>
+
+<body>
+  <h1>HTML Attributes</h1>
+  <a href="#bottom">Go to the bottom</a>
+  <h2 id="top">One</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis accusantium dignissimos perspiciatis, eaque minima
+    repellat excepturi maxime veritatis amet numquam, laboriosam ex fugit quod molestiae est aut molestias vitae
+    aspernatur officiis error ratione ea. Fugiat non commodi ipsam quidem veritatis quisquam debitis labore eos
+    praesentium earum at, sequi, officia dolorum!</p>
+  <a href="http://www.google.com">
+    <img src="images/google-logo.png" width="250px" height="85px" alt="The Google Logo">
+  </a>
+  <h2>Two</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis accusantium dignissimos perspiciatis, eaque minima
+    repellat excepturi maxime veritatis amet numquam, laboriosam ex fugit quod molestiae est aut molestias vitae
+    aspernatur officiis error ratione ea. Fugiat non commodi ipsam quidem veritatis quisquam debitis labore eos
+    praesentium earum at, sequi, officia dolorum!</p>
+  <a href="http://www.google.com">
+    <img src="images/google-logo.png" width="250px" height="85px" alt="The Google Logo">
+  </a>
+  <h2>Three</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis accusantium dignissimos perspiciatis, eaque minima
+    repellat excepturi maxime veritatis amet numquam, laboriosam ex fugit quod molestiae est aut molestias vitae
+    aspernatur officiis error ratione ea. Fugiat non commodi ipsam quidem veritatis quisquam debitis labore eos
+    praesentium earum at, sequi, officia dolorum!</p>
+  <a href="http://www.google.com">
+    <img src="images/google-logo.png" width="250px" height="85px" alt="The Google Logo">
+  </a>
+  <h2>Four</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis accusantium dignissimos perspiciatis, eaque minima
+    repellat excepturi maxime veritatis amet numquam, laboriosam ex fugit quod molestiae est aut molestias vitae
+    aspernatur officiis error ratione ea. Fugiat non commodi ipsam quidem veritatis quisquam debitis labore eos
+    praesentium earum at, sequi, officia dolorum!</p>
+  <a href="http://www.google.com">
+    <img src="images/google-logo.png" width="250px" height="85px" alt="The Google Logo">
+  </a>
+  <h2>Five</h2>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis accusantium dignissimos perspiciatis, eaque minima
+    repellat excepturi maxime veritatis amet numquam, laboriosam ex fugit quod molestiae est aut molestias vitae
+    aspernatur officiis error ratione ea. Fugiat non commodi ipsam quidem veritatis quisquam debitis labore eos
+    praesentium earum at, sequi, officia dolorum!</p>
+  <a href="http://www.google.com">
+    <img id="bottom" src="images/google-logo.png" width="250px" height="85px" alt="The Google Logo">
+  </a>
+  <a href="about.html">About page</a>
+  <a href="#top">Back to the top</a>
+
+  <!-- Bonus JavaScript! -->
+  <script type="text/javascript">
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+  </script>
+</body>
+
+</html>
